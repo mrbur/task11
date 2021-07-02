@@ -22,8 +22,8 @@ class Person {
 
 		}
 
-		Gender getGender() const {
-			return this->gender;
+		string getGender() const {
+			return this->gender == 0 ? "MALE" : "FEMALE";
 		}
 
 		string getName() {

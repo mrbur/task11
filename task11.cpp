@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Student.h"
 #include "Person.h"
+#include "Fruits.h"
 
 int main()
 {
@@ -9,6 +10,7 @@ int main()
         Student s1("Ivan", 18, Gender::MALE, 65);
         Student s2("Sasha", 19, Gender::MALE, 65);
         Student s3("Masha", 20, Gender::FEMALE, 45);
+        s3.setEducationYear(3);
         Student students[3] = { s1, s2, s3 };
 
         int choose = -1;
@@ -25,6 +27,17 @@ int main()
             }
         }
 
+    }
+
+    //2 task
+    {
+        Apple a("red");
+        Banana b;
+        GrannySmith c;
+
+        std::cout << "My " << a.getName() << " is " << a.getColor() << ".\n";
+        std::cout << "My " << b.getName() << " is " << b.getColor() << ".\n";
+        std::cout << "My " << c.getName() << " is " << c.getColor() << ".\n";
     }
     return 0;
 }
