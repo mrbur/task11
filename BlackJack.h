@@ -72,8 +72,16 @@ class BlackJackTable {
 	private:
 		unsigned int bet;
 		PlayingDeck playingDeck;
-		void prepareNewRound();
+		Player* players;
+		void refreshTable();
 
 	public:
+		BlackJackTable() {
+			//init array of players
+			//init, shufle deck
+		}
+		~BlackJackTable() {
+			delete[] players;
+		}
 		void nextRound();
 };
